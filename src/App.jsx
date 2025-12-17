@@ -10,8 +10,8 @@ function App() {
     <>
       <div>
       </div>
-      <h1>WebGL-Molecule-Viewer</h1>
-      <LoadPDBFile>Load PDB File</LoadPDBFile>
+      {/* <h1>WebGL-Molecule-Viewer</h1>
+      <LoadPDBFile>Load PDB File</LoadPDBFile> */}
       <CanvasContainer />
     </>
   )
