@@ -16,3 +16,5 @@ function CanvasContainer() {
     </div>
   )
 }
+
+export default CanvasContainer;
