@@ -1,6 +1,7 @@
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import Atoms from "./Atoms";
+import atoms from "./LoadPDBFile"
 
 function PDBScene() {
   return (
