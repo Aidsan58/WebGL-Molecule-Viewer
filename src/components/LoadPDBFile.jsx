@@ -20,7 +20,9 @@ function LoadPDBFile() {
 
     // more validation to make sure we have opened a PDB file
     reader.onload = function (e) {
-      const text = e.target.result;
+      const atoms = parsePDB(e.target.result);
+      onLoad(atoms);
+
 
       if (!text.startsWith("HEADER") && !text.includes("\nATOM")) {
         setMessage("This is not a valid PDB file.");
@@ -28,7 +30,6 @@ function LoadPDBFile() {
         return;
       }
       
-      setContent(text);
       setMessage(`Loaded PDB file: ${file.name}`);
     };
     reader.readAsText(file);
