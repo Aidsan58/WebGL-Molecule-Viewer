@@ -1,20 +1,18 @@
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
+import Atoms from "./Atoms";
 
-function CanvasContainer() {
+function PDBScene() {
   return (
     <div id="canvas-container">
       <Canvas camera={{ position: [3, 3, 3] }}>
         <ambientLight intensity={0.5} />
         <directionalLight position={[2, 2, 2]} />
-        <mesh>
-          <boxGeometry />
-          <meshStandardMaterial color="orange" />
-        </mesh>
+        <Atoms atoms={atoms} />
         <OrbitControls />
       </Canvas>
     </div>
   )
 }
 
-export default CanvasContainer;
+export default PDBScene;
