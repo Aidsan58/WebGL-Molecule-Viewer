@@ -1,4 +1,5 @@
 import { useState } from "react";
+import parsePDB from "../utils/parsePDB"
 
 function LoadPDBFile() {
   const [content, setContent] = useState("");
