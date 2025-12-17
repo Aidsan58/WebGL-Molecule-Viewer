@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import LoadPDBFile from './components/LoadPDBFile'
-import CanvasContainer from './components/CanvasContainer'
+import PDBScene from './components/PDBScene'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,7 +12,7 @@ function App() {
       </div>
       {/* <h1>WebGL-Molecule-Viewer</h1>
       <LoadPDBFile>Load PDB File</LoadPDBFile> */}
-      <CanvasContainer />
+      <PDBScene />
     </>
   )
 }
