@@ -1,4 +1,4 @@
-function Atoms({ atoms }) {
+function Atoms({ atoms = [] }) {
   return (
     <>
       {atoms.map((atom, i) => (
@@ -10,4 +10,3 @@ function Atoms({ atoms }) {
     </>
   );
 }
-const dummyAtoms = [{ position: [0,0,0], radius: 0.5, color: 0xff0000 }];
