@@ -40,11 +40,14 @@ export function parsePDB(text) {
             let x = parseFloat(line.substr(30, 8));
             let y = parseFloat(line.substr(38, 8));
             let z = parseFloat(line.substr(46, 8));
+            atoms.push({
+                element,
+                position: [x, y, z],
+                color: elementColors[element] || 0xffffff, // set element to white if there is no matching element in map
+                radius: elementRadii[element] || 1.5, // set radius to 1.5 if there is no matching element
+            });
         }
-        atoms.push(element);
-        return (
-            atomicStore.push
-        )
+        
     });
     return atoms;
 }
