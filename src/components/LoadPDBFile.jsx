@@ -1,7 +1,7 @@
 import { useState } from "react";
-import parsePDB from "../utils/parsePDB"
+import parsePDB from "../utils/parsePDB";
 
-function LoadPDBFile() {
+function LoadPDBFile({ onLoad }) { // accept onLoad as a prop
   const [content, setContent] = useState("");
   const [message, setMessage] = useState("");
 
@@ -19,20 +19,24 @@ function LoadPDBFile() {
 
     const reader = new FileReader();
 
-    // more validation to make sure we have opened a PDB file
     reader.onload = function (e) {
-      const atoms = parsePDB(e.target.result);
-      onLoad(atoms);
+      const text = e.target.result;
 
-
+      // simple validation for PDB format
       if (!text.startsWith("HEADER") && !text.includes("\nATOM")) {
         setMessage("This is not a valid PDB file.");
         setContent("");
         return;
       }
-      
+
+      setContent(text); // show the PDB content
       setMessage(`Loaded PDB file: ${file.name}`);
+
+      // parse atoms and call callback
+      const atoms = parsePDB(text);
+      if (onLoad) onLoad(atoms);
     };
+
     reader.readAsText(file);
   }
 
