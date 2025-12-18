@@ -4,15 +4,15 @@ import LoadPDBFile from './components/LoadPDBFile'
 import PDBScene from './components/PDBScene'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [atoms, setAtoms] = useState([]);
 
   return (
     <>
       <div>
       </div>
-      {/* <h1>WebGL-Molecule-Viewer</h1>
-      <LoadPDBFile>Load PDB File</LoadPDBFile> */}
-      <PDBScene />
+      <h1>WebGL-Molecule-Viewer</h1>
+      <LoadPDBFile onLoad={setAtoms}>Load PDB File</LoadPDBFile>
+      <PDBScene atoms={atoms} />
     </>
   )
 }
