@@ -3,8 +3,8 @@ function Atoms({ atoms }) {
     <>
       {atoms.map((atom, i) => (
         <mesh key={i} position={atom.position}>
-          <sphereGeometry args={[0.5, 16, 16]} />
-          <meshStandardMaterial color="cyan" />
+          <sphereGeometry args={[atom.radius, 16, 16]} />
+          <meshStandardMaterial color={atom.color} />
         </mesh>
       ))}
     </>
