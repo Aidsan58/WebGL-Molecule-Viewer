@@ -14,11 +14,9 @@ function PDBScene({ atoms }) {
       <directionalLight position={[10, 10, 10]} />
       <Atoms atoms={atoms} />
       <OrbitControls
-        enableKeys
         enableDamping
         dampingFactor={0.1}
         rotateSpeed={0.6}
-        keys={['W', 'A', 'S', 'D']}
       />
     </Canvas>
   );
