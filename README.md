@@ -1,3 +1,4 @@
 # Description
 * This is a React project using Vite as the front-end build tool. This is a WebGL-based protein viewer that takes .PDB files and renders proteins in a space-filling model. Three.js is used to implement WebGL functionality in the React app.  
-* I used React Three Fiber as the Three.js implementation because it is much easier to create components and integrates Three.js with JavaScript XML, which allows the use of HTML-like code being used alongside JavaScript code. JSX is generally transpiled into nested JavaScript function calls. 
+* I used React Three Fiber as the Three.js implementation because it is much easier to create components and integrates Three.js with JavaScript XML, which allows the use of HTML-like code being used alongside JavaScript code. JSX is generally transpiled into nested JavaScript function calls.  
+* Colors are based on CPK values https://en.wikipedia.org/wiki/CPK_coloring
