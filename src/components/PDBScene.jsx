@@ -1,9 +1,9 @@
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import Atoms from "./Atoms";
-import atoms from "./LoadPDBFile"
 
-function PDBScene() {
+
+function PDBScene( atoms ) {
   return (
     <div id="canvas-container">
       <Canvas camera={{ position: [3, 3, 3] }}>
