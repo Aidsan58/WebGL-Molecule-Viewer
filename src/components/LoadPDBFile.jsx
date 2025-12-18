@@ -1,5 +1,5 @@
 import { useState } from "react";
-import parsePDB from "../utils/parsePDB";
+import ParsePDB from "../utils/ParsePDB";
 
 function LoadPDBFile({ onLoad }) { // accept onLoad as a prop
   const [content, setContent] = useState("");
@@ -20,34 +20,33 @@ function LoadPDBFile({ onLoad }) { // accept onLoad as a prop
     const reader = new FileReader();
 
     reader.onload = function (e) {
-      const text = e.target.result;
+    const text = e.target.result;
+    setContent(text);
+    const atoms = ParsePDB(text);
+    onLoad(atoms);
 
-      // simple validation for PDB format
-      if (!text.startsWith("HEADER") && !text.includes("\nATOM")) {
-        setMessage("This is not a valid PDB file.");
-        setContent("");
-        return;
-      }
+    if (!text.startsWith("HEADER") && !text.includes("\nATOM")) {
+      setMessage("This is not a valid PDB file.");
+      setContent("");
+      return;
+    }
 
-      setContent(text); // show the PDB content
-      setMessage(`Loaded PDB file: ${file.name}`);
+    setMessage(`Loaded PDB file: ${file.name}`);
+};
 
-      // parse atoms and call callback
-      const atoms = parsePDB(text);
-      if (onLoad) onLoad(atoms);
-    };
 
     reader.readAsText(file);
   }
 
   return (
-    <>
-      <label>Upload Protein Data Bank (.pdb) File</label>
-      <input type="file" accept=".pdb" onChange={handleFileSelection} />
+    <div style={{ position: 'absolute', top: 100, left: 20, zIndex: 10, padding: '1rem', borderRadius: '8px' }}>
+      <label htmlFor="fileInput">Upload Protein Data Bank (.pdb) File</label>
+      <input id="fileInput" type="file" accept=".pdb" onChange={handleFileSelection} />
       {message && <p>{message}</p>}
       <pre>{content}</pre>
-    </>
+    </div>
   );
+
 }
 
 export default LoadPDBFile;
