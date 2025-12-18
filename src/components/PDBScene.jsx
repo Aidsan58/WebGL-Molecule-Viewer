@@ -17,18 +17,4 @@ function PDBScene({ atoms }) {
 }
 
 
-function Dummy( atoms ) {
-  return (
-    <div id="canvas-container" style={{ width: '100%', height: '100vh' }}>
-      <Canvas camera={{ position: [3, 3, 3], fov: 75 }}>
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[10, 10, 10]} intensity={1} />
-        <Atoms atoms={dummyAtoms} />
-        <OrbitControls />
-      </Canvas>
-    </div>
-  );
-}
-
-
-export default Dummy;
+export default PDBScene;
