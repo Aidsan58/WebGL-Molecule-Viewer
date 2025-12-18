@@ -10,3 +10,4 @@ function Atoms({ atoms }) {
     </>
   );
 }
+const dummyAtoms = [{ position: [0,0,0], radius: 0.5, color: 0xff0000 }];
