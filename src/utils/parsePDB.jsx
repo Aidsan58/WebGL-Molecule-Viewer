@@ -1,4 +1,4 @@
-export function parsePDB(text) {
+function ParsePDB(text) {
     const atoms = [];
 
     // define element color based on CPK values https://en.wikipedia.org/wiki/CPK_coloring
@@ -51,3 +51,5 @@ export function parsePDB(text) {
     });
     return atoms;
 }
+
+export default ParsePDB;
