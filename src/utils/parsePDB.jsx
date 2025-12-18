@@ -10,7 +10,7 @@ export function parsePDB(text) {
         S: 0xffff00, // yellow
         P: 0xffa500, // orange
         NA: 0x0000FF, // blue
-        Cl: 0x00FF00, // green
+        CL: 0x00FF00, // green
         FE: 0xBE5103, // orange
         CA: 0xA9A9A9, // dark grey
         BR: 0x964B00, // brown
