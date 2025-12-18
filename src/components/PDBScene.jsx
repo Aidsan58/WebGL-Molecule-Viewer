@@ -5,14 +5,15 @@ import Atoms from "./Atoms";
 
 function PDBScene({ atoms }) {
   return (
-    <div id="canvas-container" style={{ width: '100%', height: '100vh' }}>
-      <Canvas camera={{ position: [3, 3, 3], fov: 75 }}>
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[10, 10, 10]} intensity={1} />
-        <Atoms atoms={atoms || []} />
-        <OrbitControls />
-      </Canvas>
-    </div>
+    <Canvas
+      style={{ position: 'fixed', inset: 0, zIndex: 0 }}
+      camera={{ position: [10, 10, 10], fov: 75 }}
+    >
+      <ambientLight intensity={0.8} />
+      <directionalLight position={[10, 10, 10]} />
+      <Atoms atoms={atoms} />
+      <OrbitControls />
+    </Canvas>
   );
 }
 
