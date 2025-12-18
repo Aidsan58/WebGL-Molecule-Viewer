@@ -10,3 +10,5 @@ function Atoms({ atoms = [] }) {
     </>
   );
 }
+
+export default Atoms;
