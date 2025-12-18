@@ -6,13 +6,20 @@ import Atoms from "./Atoms";
 function PDBScene({ atoms }) {
   return (
     <Canvas
+      tabIndex={0}
       style={{ position: 'fixed', inset: 0, zIndex: 0 }}
       camera={{ position: [10, 10, 10], fov: 75 }}
     >
       <ambientLight intensity={0.8} />
       <directionalLight position={[10, 10, 10]} />
       <Atoms atoms={atoms} />
-      <OrbitControls />
+      <OrbitControls
+        enableKeys
+        enableDamping
+        dampingFactor={0.1}
+        rotateSpeed={0.6}
+        keys={['W', 'A', 'S', 'D']}
+      />
     </Canvas>
   );
 }
