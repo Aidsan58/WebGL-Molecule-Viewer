@@ -8,6 +8,15 @@ import Home from './components/Home'
 import About from './components/About'
 import Game from './components/Game'
 
+function Layout({ children }) {
+  return (
+    <>
+      <Navbar />
+      <main>{children}</main>
+    </>
+  );
+}
+
 function App() {
   const [atoms, setAtoms] = useState([]);
 
