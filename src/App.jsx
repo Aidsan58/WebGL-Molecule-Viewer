@@ -4,20 +4,10 @@ import PDBScene from './components/PDBScene';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Home from './components/Home'
-import About from './components/About'
-import Game from './components/Game'
-
-import Navbar from "./components/Navbar";
-
-function Layout({ children }) {
-  return (
-    <>
-      <Navbar />
-      <main>{children}</main>
-    </>
-  );
-}
+import Layout from "./Layout";
+import Home from "./components/Home";
+import About from "./components/About";
+import Game from "./components/Game";
 
 function App() {
   const [atoms, setAtoms] = useState([]);
