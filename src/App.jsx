@@ -8,6 +8,8 @@ import Home from './components/Home'
 import About from './components/About'
 import Game from './components/Game'
 
+import Navbar from "./components/Navbar";
+
 function Layout({ children }) {
   return (
     <>
