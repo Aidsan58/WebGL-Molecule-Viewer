@@ -13,36 +13,15 @@ function App() {
   const [atoms, setAtoms] = useState([]);
 
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Layout>
-                <Home />
-              </Layout>
-            }
-          />
-          <Route
-            path="/about"
-            element={
-              <Layout>
-                <About />
-              </Layout>
-            }
-          />
-          <Route
-            path="/molecule-viewer"
-            element={
-              <Layout>
-                <Game />
-              </Layout>
-            }
-          />
-        </Routes>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/molecule-viewer" element={<Game />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
