@@ -1,5 +1,5 @@
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
+import KeyboardControls from '../utils/KeyboardControls'
 import Atoms from "./Atoms";
 
 
@@ -13,11 +13,7 @@ function PDBScene({ atoms }) {
       <ambientLight intensity={0.8} />
       <directionalLight position={[10, 10, 10]} />
       <Atoms atoms={atoms} />
-      <OrbitControls
-        enableDamping
-        dampingFactor={0.1}
-        rotateSpeed={0.6}
-      />
+      <KeyboardControls />
     </Canvas>
   );
 }
