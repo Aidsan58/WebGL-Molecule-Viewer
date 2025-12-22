@@ -1,21 +1,25 @@
 import { useState } from "react";
 import LoadPDBFile from "./LoadPDBFile";
 import PDBScene from "./PDBScene";
+import "./../Game.css";
 
 function Game() {
   const [atoms, setAtoms] = useState([]);
 
   return (
-    <>
+    <div className="game-container">
       {/* UI LAYER */}
-      <h1>WebGL Molecule Viewer</h1>
-      <div className="ui">
-        <LoadPDBFile onLoad={setAtoms} />
-      </div>
-
+      <div className="game-ui">
+        <h1>WebGL Molecule Viewer</h1>
+        <div className="file-loader">
+          <LoadPDBFile onLoad={setAtoms} />
+        </div>
       {/* 3D SCENE */}
-      <PDBScene atoms={atoms} />
-    </>
+      <div className="game-scene">
+        <PDBScene atoms={atoms} />
+      </div>
+    </div>
+    </div>
   );
 }
 
