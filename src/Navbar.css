@@ -14,7 +14,7 @@
   height: 50px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #00bcd4;  /* optional neon border */
+  border: 2px solid #00bcd4;
   box-shadow: 
     0 0 5px #00bcd4,      /* subtle glow */
     0 0 20px #00bcd4;     /* extra soft glow */
