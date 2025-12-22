@@ -3,6 +3,8 @@
   align-items: center;
   padding: 10px 30px;
   background-color: #0b1622;
+  position: relative;
+  z-index: 1000;
 }
 
 .logo {
