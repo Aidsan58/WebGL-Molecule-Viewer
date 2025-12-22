@@ -1,0 +1,43 @@
+/* Main page layout */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 80px); /* adjust if navbar height differs */
+  background-color: #0b1622;
+  color: blanchedalmond;
+}
+
+/* UI section (top overlay) */
+.game-ui {
+  padding: 20px 30px;
+  gap: 16px;
+  border-bottom: 1px solid rgba(0, 188, 212, 0.3);
+  background-color: #0b1622;
+  z-index: 10;
+}
+
+/* Title */
+.game-ui h1 {
+  margin: 0 0 10px;
+  font-size: 2rem;
+  color: #00bcd4;
+  text-shadow:
+    0 0 5px #00bcd4,
+    0 0 10px #00bcd4;
+}
+
+/* Scene container */
+.game-scene {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.file-loader {
+    position: relative;
+}
+
+.file-loader input[type="file"] {
+  position: static;
+  margin-top: 10px;
+}
