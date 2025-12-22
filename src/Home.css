@@ -1,0 +1,45 @@
+/* Main header container */
+.home-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px; /* space from top */
+    text-align: center;
+    background-color: #0b1622; /* dark matching navbar */
+    color: blanchedalmond;
+    min-height: 80vh; /* take most of viewport */
+}
+
+/* Welcome text with neon effect */
+.home-header #WELCOME {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #00bcd4;
+    text-shadow: 
+        0 0 5px #00bcd4,
+        0 0 10px #00bcd4,
+        0 0 20px #00bcd4,
+        0 0 30px #00bcd4;
+    margin-bottom: 20px;
+    display: inline-block;
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Glow animation */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #00bcd4, 0 0 20px #00bcd4;
+    }
+    100% {
+        text-shadow: 0 0 10px #00bcd4, 0 0 30px #00bcd4;
+    }
+}
+
+/* Paragraph styling */
+.home-header p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    line-height: 1.6;
+    color: #eee;
+}
