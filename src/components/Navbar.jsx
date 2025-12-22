@@ -6,7 +6,7 @@ function Navbar() {
     <nav className="navbar">
       <Link to="/">Home</Link>
       <Link to="/about">About</Link>
-      <Link to="/molecule-viewer">Game</Link>
+      <Link to="/molecule-viewer">Molecule Renderer</Link>
     </nav>
   );
 }
