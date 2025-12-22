@@ -1,0 +1,62 @@
+/* Page container */
+.about-header {
+  min-height: 80vh;
+  padding: 100px 20px;
+  background-color: #0b1622;
+  color: blanchedalmond;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* ABOUT title */
+#ABOUT {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #00bcd4;
+  text-shadow:
+    0 0 5px #00bcd4,
+    0 0 20px #00bcd4;
+  margin-bottom: 40px;
+}
+
+/* List container */
+.about-list {
+  list-style: none; /* remove bullets */
+  padding: 0;
+  max-width: 800px;
+  text-align: left;
+}
+
+/* List items */
+.about-list li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  padding-left: 24px;
+  position: relative;
+}
+
+/* Custom bullet */
+.about-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #00bcd4;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+/* Links inside list */
+.about-list a {
+  color: #00bcd4;
+  margin-left: 6px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.about-list a:hover {
+  text-decoration: underline;
+}
