@@ -33,11 +33,12 @@
   overflow: hidden;
 }
 
-.file-loader {
+/* File selector button */
+.file-selector-button {
     position: relative;
 }
 
-.file-loader input[type="file"] {
+.file-selector-button input[type="file"] {
   position: static;
   margin-top: 10px;
 }
