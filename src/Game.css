@@ -36,9 +36,10 @@
 /* File selector button */
 .file-loader {
     position: relative;
+    padding: 1px 1px;
+    margin-top: 10px;
 }
 
 .file-loader input[type="file"] {
-  position: static;
-  margin-top: 10px;
+  display: none;
 }
