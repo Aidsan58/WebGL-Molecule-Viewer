@@ -11,7 +11,7 @@ function Game() {
       {/* UI LAYER */}
       <div className="game-ui">
         <h1>WebGL Molecule Viewer</h1>
-        <div className="file-selector-button">
+        <div className="file-loader">
           <LoadPDBFile onLoad={setAtoms} />
         </div>
       {/* 3D SCENE */}

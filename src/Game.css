@@ -34,11 +34,11 @@
 }
 
 /* File selector button */
-.file-selector-button {
+.file-loader {
     position: relative;
 }
 
-.file-selector-button input[type="file"] {
+.file-loader input[type="file"] {
   position: static;
   margin-top: 10px;
 }
