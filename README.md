@@ -3,3 +3,4 @@
 * I used React Three Fiber as the Three.js implementation because it is much easier to create components and integrates Three.js with JavaScript XML, which allows the use of HTML-like code being used alongside JavaScript code. JSX is generally transpiled into nested JavaScript function calls.  
 * Colors are based on CPK values https://en.wikipedia.org/wiki/CPK_coloring  
 * Logo source: https://www.flaticon.com/free-icons/chemistry  
+* To run natively: run the terminal command 'npm run dev' in the project's directory.
