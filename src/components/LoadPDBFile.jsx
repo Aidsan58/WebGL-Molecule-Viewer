@@ -39,8 +39,8 @@ function LoadPDBFile({ onLoad }) { // accept onLoad as a prop
   }
 
   return (
-    <div style={{ position: 'absolute', top: 100, left: 20, zIndex: 10, padding: '1rem', borderRadius: '8px' }}>
-      <label htmlFor="fileInput">Upload Protein Data Bank (.pdb) File</label>
+    <div style={{ position: 'absolute', top: 30, left: 10, zIndex: 10, padding: '1rem', borderRadius: '8px' }}>
+      <label htmlFor="fileInput"><b>Click here to Upload Protein Data Bank (.pdb) File</b></label>
       <input id="fileInput" type="file" accept=".pdb" onChange={handleFileSelection} />
     </div>
   );
